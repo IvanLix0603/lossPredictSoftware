@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>948</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ПО для прогнозирования оценки производительности</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../.designer/backup/wall2.png</normaloff>../../../.designer/backup/wall2.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="predLos">
+     <attribute name="title">
+      <string> Прогнозирование</string>
+     </attribute>
+     <widget class="QLabel" name="Text">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>1</y>
+        <width>579</width>
+        <height>58</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Выберите конфигурацию входных параметров оценки производительности компьютера&lt;/span&gt;.(Выберите вариант тестирования, количествово элементов в квадратных матрицах, используемых в тестах, наличие оптимизации и многопоточности)&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_threadsp">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>120</y>
+        <width>44</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Да</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>130</y>
+        <width>201</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QCheckBox" name="check_optimizationp">
+         <property name="text">
+          <string>Нет</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="check_optimization_o1p">
+         <property name="text">
+          <string>первый урвень (-O1)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="check_optimization_o2p">
+         <property name="text">
+          <string>второй уровень(-O2)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="text_threads">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>80</y>
+        <width>129</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;4) Использование многопоточности&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="test_test">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>80</y>
+        <width>71</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1) Тесты:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="text_elements">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>65</y>
+        <width>201</width>
+        <height>72</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2) Размерность квадратных матриц, используемых в тестах производитлеьности&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="text_optimization">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>70</y>
+        <width>230</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;3) Использование оптимизации&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>532</width>
+        <height>308</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QCheckBox" name="test_1p">
+           <property name="text">
+            <string>Тест 1: 
+оценивает потери производительности 
+при промахах в кэш-памяти процессора, 
+во время работы тестируемой программы;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="test_2p">
+           <property name="text">
+            <string>Тест 2:
+оценивает влияние использования 
+ разных опциях компилятора, при наличии 
+связности алгоритмов, 
+во время работы тестируемой программы</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="test_3p">
+           <property name="text">
+            <string>Тест 3:
+оценивает влияние выполнения системных 
+процессов, при работе тестируемой программы</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="test_4p">
+           <property name="text">
+            <string>Тест 4:
+оценивает влияние пользовательских процессов, 
+при работе тестируемой программы.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QCheckBox" name="btn_25elp">
+           <property name="text">
+            <string>25 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_50elp">
+           <property name="text">
+            <string>50 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_100elp">
+           <property name="text">
+            <string>100 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_150elp">
+           <property name="text">
+            <string>150 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_200elp">
+           <property name="text">
+            <string>200 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_300elp">
+           <property name="text">
+            <string>300 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_500elp">
+           <property name="text">
+            <string>500 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_1000elp">
+           <property name="text">
+            <string>1000 элементов</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="btn_1200elp">
+           <property name="text">
+            <string>1200 элементов</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="buttonPredict">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>370</y>
+        <width>158</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>получть прогоноз</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="outputPredict">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>330</y>
+        <width>158</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Прогноз</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="testing">
+     <attribute name="title">
+      <string>Тестирование</string>
+     </attribute>
+     <widget class="QLabel" name="text_elements_3">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>103</y>
+        <width>166</width>
+        <height>72</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2) Размерность квадратных матриц, используемых в тестах производитлеьности&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="test_test_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>120</y>
+        <width>62</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1) Тесты:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Text_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>-20</y>
+        <width>481</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Выберите конфигурацию параметров тестирования производительности компьютера&lt;/span&gt;. (Выберите вариант тестирования, количествово элементов в квадратных матрицах, используемых в тестах)&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonTest">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>450</y>
+        <width>191</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Начать тестирование</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>382</width>
+        <height>306</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="test_1t">
+         <property name="text">
+          <string>Тест 1: 
+оценивает потери производительности 
+при промахах в кэш-памяти процессора, 
+во время работы тестируемой программы;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="test_2t">
+         <property name="text">
+          <string>Тест 2:
+оценивает влияние использования 
+ разных опциях компилятора, при наличии 
+связности алгоритмов, 
+во время работы тестируемой программы</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="test_3t">
+         <property name="text">
+          <string>Тест 3:
+оценивает влияние выполнения системных 
+процессов, при работе тестируемой программы</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="test_4t">
+         <property name="text">
+          <string>Тест 4:
+оценивает влияние пользовательских процессов, 
+при работе тестируемой программы.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>183</y>
+        <width>142</width>
+        <height>257</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="btn_25elt">
+         <property name="text">
+          <string>25 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_50elt">
+         <property name="text">
+          <string>50 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_100elt">
+         <property name="text">
+          <string>100 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_150elt">
+         <property name="text">
+          <string>150 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_200elt">
+         <property name="text">
+          <string>200 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_300elt">
+         <property name="text">
+          <string>300 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_500elt">
+         <property name="text">
+          <string>500 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_1000elt">
+         <property name="text">
+          <string>1000 элементов</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="btn_1200elt">
+         <property name="text">
+          <string>1200 элементов</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="picLoss4">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>260</y>
+        <width>190</width>
+        <height>170</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="picLoss3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>260</y>
+        <width>190</width>
+        <height>170</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>744</x>
+        <y>230</y>
+        <width>169</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>потери во втором тесте</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="picLoss2">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>60</y>
+        <width>191</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="margin">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>430</y>
+        <width>191</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>потери в третьем тесте</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>430</y>
+        <width>183</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>потери в четвертом тесте</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="picLoss1">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>60</y>
+        <width>190</width>
+        <height>170</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>230</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>потери в первом тесте</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="statusProgT">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>450</y>
+        <width>191</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Статус выполнения</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="upnn">
+     <attribute name="title">
+      <string>Обучение нейронной сети</string>
+     </attribute>
+     <widget class="QPushButton" name="buttonLearn">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>340</y>
+        <width>131</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Начать обучение</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="learningError">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>77</y>
+        <width>320</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="testError">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>77</y>
+        <width>320</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>240</y>
+        <width>299</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>график изменения ошибки при обучении </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>237</y>
+        <width>326</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>график изменения ошибки при тестировании</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>181</width>
+        <height>110</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLineEdit" name="learningRate">
+         <property name="placeholderText">
+          <string>Скорость обучения</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="numEpochs">
+         <property name="placeholderText">
+          <string>Количество эпох</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="batchSize">
+         <property name="placeholderText">
+          <string>Размер пакета обучения</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>510</y>
+      <width>177</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="clean">
+       <property name="text">
+        <string>Очистить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exit">
+       <property name="text">
+        <string>Выйти</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
